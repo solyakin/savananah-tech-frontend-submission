@@ -21,8 +21,8 @@ const CanvasPage =  () => {
     
     const [selectedShapes, setSelectedShapes] = useState<string[]>([]);
     const [shapes, setShapes] = useState<Shape[]>([
-      { id: 'rect1', type: 'rect', x: 50, y: 50, width: 100, height: 100, fill: 'red', isDragging: false },
-      { id: 'circle1', type: 'circle', x: 250, y: 150, radius: 50, fill: 'blue', isDragging: false },
+      { id: 'shape1', type: 'rect', x: 50, y: 50, width: 100, height: 100, fill: 'red', isDragging: false },
+      { id: 'shape2', type: 'circle', x: 250, y: 150, radius: 50, fill: 'blue', isDragging: false },
     ]);
 
     // Handle dragging start
