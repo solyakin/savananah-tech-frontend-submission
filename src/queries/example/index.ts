@@ -49,14 +49,11 @@ const fetchingPokeMan = async(keyword: string, page: number, limit: number) => {
   return response?.data;
 }
 
-interface DataProps {
-  count: number;
-  next: string;
-  previous: string;
-  results: any;
-}
-
-export const useSearchQuery = (keyword: string, page: number, limit: number): UseQueryResult< DataProps| undefined> => {
+export const useSearchQuery = (
+  keyword: string, 
+  page: number, 
+  limit: number): 
+  UseQueryResult< i.DataProps| undefined> => {
   return useQuery(
     ['pokemons', keyword, page, limit],
     () => fetchingPokeMan(keyword, page, limit),
