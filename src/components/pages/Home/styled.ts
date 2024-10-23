@@ -9,6 +9,11 @@ export const PrimeHeader = styled.header`
   & > svg {
     width: 250px;
   }
+  & > a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.2rem;
+  }
 `;
 
 export const PrimeContent = styled.section`

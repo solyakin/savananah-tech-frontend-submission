@@ -1,5 +1,6 @@
 import * as i from 'types';
 import { useMutation, useQueryClient, useQuery, UseQueryResult } from 'react-query';
+import axios from 'axios';
 
 export const useCreateUser = () => {
   const queryClient = useQueryClient();
@@ -35,6 +36,24 @@ export const useGetUser = (userId: string): UseQueryResult<i.Data | undefined> =
     }),
     {
       enabled: Boolean(userId),
+    },
+  );
+};
+
+
+let BASE_URL = 'https:example.com'
+
+const fetchingPokeMan = async(keyword: string, page: number) => {
+  const response = await axios.get(`${BASE_URL}/query?page=${page}&search=${keyword}`);
+  return response?.data;
+}
+
+export const useSearchQuery = (keyword: string, page: number): UseQueryResult<i.Data | undefined> => {
+  return useQuery(
+    ['search', keyword, page],
+    () => fetchingPokeMan(keyword, page),
+    {
+      keepPreviousData: true,
     },
   );
 };

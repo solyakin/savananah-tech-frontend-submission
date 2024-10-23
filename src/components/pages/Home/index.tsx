@@ -5,10 +5,15 @@ import Logo from 'vectors/logo.svg';
 import GithubLogo from 'images/github-logo.png';
 
 import { GithubLink, PrimeContent, PrimeHeader } from './styled';
+import { Link } from 'react-router-dom';
 
 const Prime: React.FC = () => (
   <>
-    <PrimeHeader></PrimeHeader>
+    <PrimeHeader>
+      <Link to={'/'}>Home</Link>
+      <Link to={'/pokeman'}>Pokeman</Link>
+      <Link to={'/canvas'}>Draw canvas</Link>
+    </PrimeHeader>
     <PrimeContent>
       <p>
         Created by{" "}

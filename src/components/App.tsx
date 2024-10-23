@@ -1,3 +1,5 @@
+import CanvasPage from 'pages/CanvasPage';
+import PokeManPage from 'pages/PokemanPage';
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -11,6 +13,8 @@ const App: React.FC = () => (
     <Suspense fallback={<span>loading</span>}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/pokeman" element={<PokeManPage />} />
+        <Route path="/canvas" element={<CanvasPage />} />
       </Routes>
     </Suspense>
   </main>
