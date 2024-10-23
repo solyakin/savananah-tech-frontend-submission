@@ -3,7 +3,7 @@ import  { useState } from 'react'
 import { Circle, Layer, Rect, Stage } from 'react-konva'
 import { Link } from 'react-router-dom';
 import { PrimeHeader } from 'pages/Home/styled';
-import { Heading, ListContainer } from 'pages/PokemanPage/styled';
+import { Heading, ListContainer } from 'pages/PokemonPage/styled';
 
 interface Shape {
     id: string;

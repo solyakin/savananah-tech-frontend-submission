@@ -1,5 +1,5 @@
 import CanvasPage from 'pages/CanvasPage';
-import PokeManPage from 'pages/PokemanPage';
+import PokeManPage from 'pages/PokemonPage';
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
