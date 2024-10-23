@@ -2,8 +2,8 @@ import { Button, Input, Pagination, Table } from 'antd';
 import { PrimeContent, PrimeHeader } from 'pages/Home/styled';
 import React, { useState } from 'react'
 import { Heading, ListContainer, SearchWrapper } from './styled';
-import { useSearchQuery } from 'queries/example';
 import { Link } from 'react-router-dom';
+import { useSearchQuery } from 'queries/pokemon';
 
 const columns = [
   {
